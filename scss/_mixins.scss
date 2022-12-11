@@ -1,0 +1,16 @@
+@mixin mainNav_anchor{
+    color: white;
+}
+
+@mixin contactAnchor{
+    color: white;
+    background-color: $ctaColor;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+@mixin contactAnchor_hover{
+    box-shadow: 5px 5px 15px #686868, -5px -5px 15px #686868;
+    letter-spacing: 2px;
+    transition: 500ms;
+}
