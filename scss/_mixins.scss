@@ -14,3 +14,17 @@
     letter-spacing: 2px;
     transition: 500ms;
 }
+
+@mixin main_header{
+    display: grid;
+    gap: 30px;
+    text-align: center;
+}
+@mixin header_p1{
+    color: $ctaColor;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+@mixin header_p2{
+    font-size: 2rem;
+}

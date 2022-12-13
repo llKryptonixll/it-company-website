@@ -58,7 +58,7 @@
 }
 
 .hamburger:hover .hamburger-inner, .hamburger:hover .hamburger-inner::before, .hamburger:hover .hamburger-inner::after {
-  background-color: #01C2EB;
+  background-color: hsl(191deg, 99%, 46%);
   transition: 200ms;
 }
 

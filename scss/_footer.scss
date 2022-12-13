@@ -1,0 +1,49 @@
+footer{
+    background-color: $footerBg;
+    height: 500px;
+    min-height: fit-content;
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+    .header, .contact-info-list{
+        width: 90%;
+        justify-self: center;
+    }
+
+    .header{
+        text-align: center;
+
+        p:nth-child(1){
+            font-size: 2rem;
+        }   
+        p:nth-child(2){
+            white-space: pre-line;
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+    }
+
+    .contact-info-list{
+        display: grid;
+        justify-content: center;
+    }
+
+    .impressum-button{
+        border-top: 1px solid rgb(75, 75, 75);
+        height: 99%; /* if 100% I have a white line on the bottom this removes it */
+        width: 100%;
+        display: grid;
+        place-items: center;
+        button{
+            color: white;
+            transition: 300ms;
+        }
+        button:hover{
+            color: $ctaColor;
+            transition: 300ms;
+        }
+    }
+
+}

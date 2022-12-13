@@ -58,7 +58,7 @@
 }
 
 .hamburger:hover .hamburger-inner, .hamburger:hover .hamburger-inner::before, .hamburger:hover .hamburger-inner::after {
-  background-color: #01C2EB;
+  background-color: hsl(191deg, 99%, 46%);
   transition: 200ms;
 }
 
@@ -97,7 +97,7 @@
 header {
   background-color: hsl(244deg, 67%, 10%);
   height: 100vh;
-  min-height: 500px;
+  min-height: 400px;
   display: grid;
   grid-template-rows: 15% 85%;
   position: relative;
@@ -218,7 +218,7 @@ header .large-screen-nav {
   z-index: 2;
 }
 header .large-screen-nav .company-logo p {
-  color: #01C2EB;
+  color: hsl(191deg, 99%, 46%);
 }
 header .large-screen-nav .link-list .list-element {
   margin-left: 20px;
@@ -228,12 +228,12 @@ header .large-screen-nav .link-list .list-element .main-anchors {
   transition: 200ms;
 }
 header .large-screen-nav .link-list .list-element .main-anchors:hover {
-  color: #01C2EB;
+  color: hsl(191deg, 99%, 46%);
   transition: 200ms;
 }
 header .large-screen-nav .link-list .list-element .contact-anchor {
   color: white;
-  background-color: #01C2EB;
+  background-color: hsl(191deg, 99%, 46%);
   padding: 15px;
   border-radius: 25px;
   transition: 500ms;
@@ -255,7 +255,7 @@ header .hero-section-main-container {
   text-align: center;
 }
 header .hero-section-main-container .sub-header {
-  color: #01C2EB;
+  color: hsl(191deg, 99%, 46%);
   font-size: 1.3rem;
   letter-spacing: 5px;
 }
@@ -277,7 +277,7 @@ header .mobile-nav-sidebar {
   background-color: rgb(236, 236, 236);
   height: 100%;
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 100%;
   text-align: center;
   align-items: center;
   box-shadow: 5px 5px 15px rgb(159, 175, 211);
@@ -285,25 +285,31 @@ header .mobile-nav-sidebar {
   transform: translateX(-350px);
   transition: 500ms;
 }
+header .mobile-nav-sidebar .close-sidebar-btn {
+  position: absolute;
+  top: 2.5%;
+  left: 5%;
+}
 header .mobile-nav-sidebar .close-sidebar-btn button span {
-  font-size: 2rem;
-  color: #01C2EB;
+  font-size: 2.2rem;
+  color: hsl(191deg, 99%, 46%);
 }
 header .mobile-nav-sidebar .mobile-nav .link-list {
   display: grid;
-  gap: 80px;
+  align-content: center;
+  gap: 40px;
 }
 header .mobile-nav-sidebar .mobile-nav .link-list .list-element .main-anchors {
   color: black;
   transition: 200ms;
 }
 header .mobile-nav-sidebar .mobile-nav .link-list .list-element .main-anchors:hover {
-  color: #01C2EB;
+  color: hsl(191deg, 99%, 46%);
   transition: 200ms;
 }
 header .mobile-nav-sidebar .mobile-nav .link-list .list-element .contact-anchor {
   color: white;
-  background-color: #01C2EB;
+  background-color: hsl(191deg, 99%, 46%);
   padding: 15px;
   border-radius: 25px;
   box-shadow: 5px 5px 15px #a0a0a0, -5px -5px 15px #a0a0a0;
@@ -315,12 +321,466 @@ header .mobile-nav-sidebar .mobile-nav .link-list .list-element .contact-anchor:
   transition: 500ms;
 }
 
+main .service-section {
+  background-color: hsl(240deg, 64%, 4%);
+  height: fit-content;
+  display: grid;
+  height: 1000px;
+  grid-template-rows: 25% 75%;
+  place-items: center;
+  color: white;
+}
+main .service-section .header {
+  display: grid;
+  gap: 30px;
+  text-align: center;
+}
+main .service-section .header p:nth-child(1) {
+  color: hsl(191deg, 99%, 46%);
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+}
+main .service-section .header p:nth-child(2) {
+  font-size: 2rem;
+}
+main .service-section .service-content-wrapper {
+  width: 90%;
+  display: grid;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+main .service-section .service-buttons-container {
+  align-self: center;
+}
+main .service-section .service-buttons-container ul {
+  display: grid;
+  gap: 20px;
+}
+main .service-section .service-buttons-container ul li {
+  display: grid;
+  gap: 10px;
+  /* js class to open accordion */
+}
+main .service-section .service-buttons-container ul li .button {
+  display: flex;
+  color: hsl(251deg, 16%, 20%);
+  align-items: center;
+  cursor: pointer;
+}
+main .service-section .service-buttons-container ul li .button p {
+  font-size: 2rem;
+  margin-left: 20px;
+  position: relative;
+}
+main .service-section .service-buttons-container ul li .button p::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: hsl(191deg, 99%, 46%);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+main .service-section .service-buttons-container ul li .button p:hover::after {
+  width: 100%;
+  left: 0;
+}
+main .service-section .service-buttons-container ul li .button span {
+  font-size: 0.6rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
+main .service-section .service-buttons-container ul li .expand-content {
+  width: min(600px, 90%);
+  justify-self: left;
+  border-radius: 2px;
+  background-color: white;
+  visibility: hidden;
+  padding: 0;
+  height: 0;
+  transition: 300ms;
+}
+main .service-section .service-buttons-container ul li .expand-content p {
+  font-size: 1rem;
+  margin: 0;
+  color: black;
+}
+main .service-section .service-buttons-container ul li .open-accordion {
+  padding: 20px;
+  height: auto;
+  visibility: visible;
+  transition: 300ms;
+}
+main .details-section {
+  background-color: white;
+  height: 400px;
+  display: grid;
+  grid-template-rows: 40% 60%;
+  place-items: center;
+}
+main .details-section .header p {
+  white-space: pre-line;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1d1d1d;
+}
+main .details-section .detail-list {
+  display: flex;
+  text-align: center;
+  width: 90%;
+  justify-content: center;
+}
+main .details-section .detail-list li:nth-child(1) {
+  margin-left: 0;
+}
+main .details-section .detail-list li {
+  display: grid;
+  gap: 10px;
+  margin-left: 50px;
+}
+main .details-section .detail-list li p:nth-child(1) {
+  color: hsl(191deg, 99%, 46%);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main .details-section .detail-list li p:nth-child(2) {
+  color: rgb(112, 112, 112);
+  font-size: 0.9rem;
+}
+main .hire-us-section {
+  background-image: url("../images/hire-us-section-bg.jpg");
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  display: grid;
+}
+main .hire-us-section .hire-us-text {
+  height: 100%;
+  width: 90%;
+  justify-self: center;
+  white-space: pre-line;
+  color: white;
+  display: grid;
+  align-content: center;
+  gap: 30px;
+  place-items: center;
+  text-align: center;
+}
+main .hire-us-section .hire-us-text p:nth-child(1) {
+  color: hsl(191deg, 99%, 46%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+main .hire-us-section .hire-us-text p:nth-child(2) {
+  font-size: 2rem;
+}
+main .hire-us-section .hire-us-text p:nth-child(3) {
+  font-size: 1.1rem;
+  text-align: center;
+  color: rgb(173, 173, 173);
+}
+main .hire-us-section .hire-us-text button {
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+}
+main .hire-us-section .hire-us-text button span {
+  margin-left: 30px;
+}
+main .hire-us-section .hire-us-text button::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsl(191deg, 99%, 46%);
+  top: 11px;
+  left: -11px;
+  transition: 500ms;
+}
+main .hire-us-section .hire-us-text button:hover::after {
+  width: 89%;
+  border-radius: 5px;
+  transition: 500ms;
+}
+main .hire-us-section::after {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.808);
+}
+main .clients-section {
+  background-color: white;
+  height: 900px;
+  min-height: fit-content;
+  display: grid;
+  grid-template-rows: 25% 75%;
+  place-items: center;
+}
+main .clients-section .header {
+  display: grid;
+  gap: 30px;
+  text-align: center;
+}
+main .clients-section .header p:nth-child(1) {
+  color: hsl(191deg, 99%, 46%);
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+}
+main .clients-section .header p:nth-child(2) {
+  font-size: 2rem;
+}
+main .clients-section .content-wrapper {
+  width: 90%;
+  height: 100%;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 50px;
+  align-items: center;
+  justify-items: center;
+}
+main .clients-section .content-wrapper .article-container {
+  display: grid;
+  align-items: center;
+  position: relative;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+main .clients-section .content-wrapper .article-container .client-thoughts {
+  position: absolute;
+  overflow: hidden;
+  transition: 500ms; /* for js slide effect */
+}
+main .clients-section .content-wrapper .article-container .client-thoughts .person-info-container .name {
+  font-size: 1.4rem;
+}
+main .clients-section .content-wrapper .article-container .client-thoughts .person-info-container .location {
+  font-size: 0.7rem;
+  color: #999999;
+  font-weight: bold;
+}
+main .clients-section .content-wrapper .article-container .client-thoughts .person-info-container .location span {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: black;
+}
+main .clients-section .content-wrapper .article-container .client-thoughts .main-content {
+  font-size: 0.9rem;
+  white-space: pre-line;
+  color: #8d8d8d;
+  margin-bottom: 50px;
+}
+main .clients-section .content-wrapper .slide-navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -50px;
+  display: grid;
+  gap: 10px;
+  font-size: 1.5rem;
+  color: hsl(191deg, 99%, 46%);
+  text-shadow: 1px 1px 1px rgb(61, 61, 61);
+}
+main .clients-section .content-wrapper .slide-navigation i {
+  cursor: pointer;
+}
+main .clients-section .content-wrapper .slide-navigation i:hover {
+  transition: 400ms;
+  color: black;
+}
+main .clients-section .content-wrapper .image-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 50px;
+}
+main .clients-section .content-wrapper .image-container img {
+  border-radius: 50%;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: 500ms;
+}
+main .clients-section .content-wrapper .image-container img:hover {
+  transition: 500ms;
+  opacity: 1 !important;
+}
+main .clients-section .content-wrapper .image-container .image-wrapper1 {
+  display: flex;
+  justify-content: center;
+}
+main .clients-section .content-wrapper .image-container .image-wrapper1 img:nth-child(1) {
+  width: 60px;
+  height: 60px;
+}
+main .clients-section .content-wrapper .image-container .image-wrapper1 img:nth-child(2) {
+  margin-left: 60px;
+}
+main .clients-section .content-wrapper .image-container .image-wrapper2 {
+  display: flex;
+  justify-content: center;
+}
+main .clients-section .content-wrapper .image-container .image-wrapper2 img:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  align-self: center;
+}
+main .clients-section .content-wrapper .image-container .image-wrapper2 img:nth-child(2) {
+  align-self: flex-end;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+main .clients-section .content-wrapper .image-container .image-wrapper2 img:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+main .clients-section .content-wrapper .image-container .image-wrapper3 {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  background-color: hsl(240deg, 64%, 4%);
+  height: 500px;
+  min-height: fit-content;
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+footer .header, footer .contact-info-list {
+  width: 90%;
+  justify-self: center;
+}
+footer .header {
+  text-align: center;
+}
+footer .header p:nth-child(1) {
+  font-size: 2rem;
+}
+footer .header p:nth-child(2) {
+  white-space: pre-line;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+footer .contact-info-list {
+  display: grid;
+  justify-content: center;
+}
+footer .impressum-button {
+  border-top: 1px solid rgb(75, 75, 75);
+  height: 99%; /* if 100% I have a white line on the bottom this removes it */
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+footer .impressum-button button {
+  color: white;
+  transition: 300ms;
+}
+footer .impressum-button button:hover {
+  color: hsl(191deg, 99%, 46%);
+  transition: 300ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Unbounded", cursive;
+}
+
+body {
+  overflow-x: hidden;
+  cursor: none;
+}
+
+button {
+  border: unset;
+  background-color: unset;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cursor {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid gray;
+  z-index: 4;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+
+.cursor::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: hsl(191deg, 99%, 46%);
+}
+
+@media (max-width: 1024px) {
+  main .clients-section .content-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  main .clients-section .content-wrapper .article-container .client-thoughts .main-content {
+    white-space: normal;
+  }
+  main .clients-section .content-wrapper .image-container img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  main .clients-section .content-wrapper .slide-navigation {
+    top: -70px;
+    left: 20%;
+    transform: translateX(-20%);
+    display: flex;
+    flex-flow: row-reverse;
+  }
+  main .clients-section .content-wrapper .slide-navigation i {
+    transform: rotate(90deg);
+  }
+}
 @media (max-width: 900px) {
   header .large-screen-nav .link-list {
     display: none;
   }
   header .large-screen-nav .hamburger {
     display: inline-block;
+  }
+  header .mobile-nav-sidebar .close-sidebar-btn {
+    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -345,6 +805,40 @@ header .mobile-nav-sidebar .mobile-nav .link-list .list-element .contact-anchor:
     justify-content: center;
     transform: translateX(-110%);
   }
+  header .mobile-nav-sidebar .close-sidebar-btn {
+    display: grid;
+  }
+  main .service-section .service-buttons-container ul li .button p {
+    font-size: 1.5rem;
+  }
+  main .service-section .service-buttons-container ul li .button p::after {
+    display: none;
+  }
+  main .service-section .service-buttons-container ul li .expand-content p {
+    font-size: 0.9rem;
+  }
+  main .hire-us-section {
+    height: 500px;
+  }
+  main .hire-us-section .hire-us-text p:nth-child(2) {
+    font-size: 1.3rem;
+  }
+  main .hire-us-section .hire-us-text p:nth-child(3) {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 500px) {
+  main .details-section {
+    height: 500px;
+    grid-template-rows: 20% 80%;
+  }
+  main .details-section .detail-list {
+    display: grid;
+    gap: 50px;
+  }
+  main .details-section .detail-list li {
+    margin-left: 0;
+  }
 }
 @media (max-width: 425px) {
   header .hero-section-main-container .sub-header {
@@ -356,29 +850,19 @@ header .mobile-nav-sidebar .mobile-nav .link-list .list-element .contact-anchor:
   header .hero-section-main-container .subtitle {
     font-size: 0.7rem;
   }
-}
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Unbounded", cursive;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-button {
-  border: unset;
-  background-color: unset;
-  cursor: pointer;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
+  main .service-section .service-buttons-container ul li button p {
+    font-size: 1.2rem;
+  }
+  main .service-section .service-buttons-container ul li .expand-content p {
+    font-size: 0.8rem;
+  }
+  main .clients-section .content-wrapper .image-container img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  main .clients-section .content-wrapper .slide-navigation {
+    top: -70px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

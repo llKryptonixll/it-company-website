@@ -1,8 +1,9 @@
 @import "variables";
 @import "mixins";
 @import "hamburger";
+@import "header";
 @import "sections";
-@import "media-queries";
+@import "footer";
 
 *{
     margin: 0;
@@ -12,6 +13,7 @@
 
 body{
     overflow-x: hidden;
+    cursor: none;
 }
 
 button{
@@ -25,3 +27,27 @@ ul{
 a{
     text-decoration: none;
 }
+
+// custom cursor
+.cursor{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid gray;
+    z-index: 4;
+    pointer-events: none;
+    display: grid;
+    place-items: center;
+}
+.cursor::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $ctaColor;
+}
+
+@import "media-queries";
