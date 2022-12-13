@@ -9,16 +9,24 @@ function handleSidebar(){
     sidebarToggle.classList.toggle("is-active");
 
     const sidebar = document.querySelector(".mobile-nav-sidebar");
-    sidebar.classList.toggle("open-sidebar")
+    sidebar.classList.toggle("open-sidebar");
 }
 
 // close button if sidebar takes 100% width and remove active class from main toggle
 const closeSidebar_button = document.querySelector(".close-sidebar-btn button");
 closeSidebar_button.addEventListener("click", () => {
-    sidebar.classList.toggle("open-sidebar");
+    sidebar.classList.remove("open-sidebar");
     sidebarToggle.classList.remove("is-active");
 });
 
+// close sidebar if buttons are clicked
+const sidebarButtons = document.querySelectorAll(".mobile-nav .main-anchors");
+sidebarButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        sidebar.classList.remove("open-sidebar");
+        sidebarToggle.classList.remove("is-active");
+    });
+});
 
 // hero section custom cursor logic
 const customCursor = document.querySelector(".cursor");
