@@ -13,10 +13,11 @@
 
 body,html{
     scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body{
-    overflow-x: hidden;
     cursor: none;
 }
 
