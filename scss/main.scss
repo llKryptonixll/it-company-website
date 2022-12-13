@@ -11,6 +11,10 @@
     font-family: 'Unbounded', cursive;
 }
 
+body,html{
+    scroll-behavior: smooth;
+}
+
 body{
     overflow-x: hidden;
     cursor: none;
