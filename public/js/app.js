@@ -30,7 +30,6 @@ sidebarButtons.forEach((button) => {
 
 // hero section custom cursor logic
 const customCursor = document.querySelector(".cursor");
-const heroSection = document.querySelector(".hero-section");
 
 window.addEventListener("mousemove", (e) => {
     let x = e.pageX;
@@ -41,13 +40,6 @@ window.addEventListener("mousemove", (e) => {
     customCursor.style.transition = `100ms`;
     customCursor.style.display = "grid";
 });
-
-// disable custom cursor in new section
-const serviceSection = document.querySelector(".service-section");
-serviceSection.addEventListener("mouseenter", () => {
-    customCursor.style.display = "none";
-});
-
 
 // service accordion logic
 const accordionButtons = document.querySelectorAll(".button");
